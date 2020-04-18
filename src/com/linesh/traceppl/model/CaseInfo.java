@@ -1,57 +1,58 @@
 package com.linesh.traceppl.model;
 
 public class CaseInfo {
-
+	//[{"country":"Italy","confirmed":172434,"recovered":42727,"critical":2812,"deaths":22745,"latitude":41.87194,"longitude":12.56738}]
 	String country;
-	long confirmed;
-	long recovered;
-	long critical;
-	long death;
-	long latitude;
-	long longitude;
-	
+	String confirmed;
+	String recovered;
+	String critical;
+	String deaths;
+	String latitude;
+	String longitude;
 	public String getCountry() {
 		return country;
 	}
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public long getConfirmed() {
+	public String getConfirmed() {
 		return confirmed;
 	}
-	public void setConfirmed(long confirmed) {
+	public void setConfirmed(String confirmed) {
 		this.confirmed = confirmed;
 	}
-	public long getRecovered() {
+	public String getRecovered() {
 		return recovered;
 	}
-	public void setRecovered(long recovered) {
+	public void setRecovered(String recovered) {
 		this.recovered = recovered;
 	}
-	public long getCritical() {
+	public String getCritical() {
 		return critical;
 	}
-	public void setCritical(long critical) {
+	public void setCritical(String critical) {
 		this.critical = critical;
 	}
-	public long getDeath() {
-		return death;
+	public String getDeaths() {
+		return deaths;
 	}
-	public void setDeath(long death) {
-		this.death = death;
+	public void setDeaths(String deaths) {
+		this.deaths = deaths;
 	}
-	public long getLatitude() {
+	public String getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(long latitude) {
+	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
-	public long getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(long longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
+	
+	
 	
 	
 	/*
