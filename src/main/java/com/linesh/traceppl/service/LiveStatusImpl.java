@@ -25,7 +25,7 @@ public class LiveStatusImpl implements LiveStatus{
 
 	@Override
 	public CaseInfo getCountryData(String country) throws JsonParseException, JsonMappingException, IOException {
-		final String uri = "https://covid-19-data.p.rapidapi.com/country?format=json&name="+country;
+		final String uri = "https://covid-19-data.p.rapidapi.com/country/code?format=json&code="+country;
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -49,7 +49,7 @@ public class LiveStatusImpl implements LiveStatus{
 		headers.put("x-rapidapi-key",   Arrays.asList(new String("9c456ba4a6msh1bcbbb00f80b8a0p1090afjsn2758eb875fd2")));
 		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 		ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-		String s=  result.getBody();
+		String s =  result.getBody();
 		ObjectMapper mapper = new ObjectMapper();
 		List<CaseInfo> cs = Arrays.asList(mapper.readValue(s, CaseInfo[].class));
 		System.out.println(cs.get(0).getConfirmed());
